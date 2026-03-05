@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Account – Lazy Traveler</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
+      background: #111827;
+      color: #F9FAFB;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+    nav {
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      gap: 16px;
+      margin-bottom: 32px;
+      padding-top: 8px;
+    }
+    nav a {
+      color: #A78BFA;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    nav a:hover { color: #7C3AED; }
+    .card {
+      background: #1F2937;
+      border: 1px solid #374151;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .icon { font-size: 40px; margin-bottom: 16px; }
+    h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; color: #F9FAFB; }
+    .subtitle {
+      color: #D1D5DB;
+      font-size: 15px;
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+    .updated {
+      font-size: 13px;
+      color: #9CA3AF;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .steps {
+      background: #111827;
+      border: 1px solid #374151;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+    }
+    .steps h2 {
+      font-size: 11px;
+      font-weight: 600;
+      color: #9CA3AF;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .step { display: flex; gap: 14px; margin-bottom: 14px; align-items: flex-start; }
+    .step:last-child { margin-bottom: 0; }
+    .step-num {
+      background: #7C3AED;
+      color: white;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step p { font-size: 14px; color: #D1D5DB; line-height: 1.6; }
+    .step strong { color: #F9FAFB; }
+    .step code {
+      background: #374151;
+      padding: 2px 7px;
+      border-radius: 5px;
+      font-size: 13px;
+      color: #A78BFA;
+    }
+    .scope-note {
+      background: #1a2535;
+      border-left: 3px solid #7C3AED;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin-bottom: 24px;
+      font-size: 13px;
+      color: #D1D5DB;
+      line-height: 1.6;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background: #7C3AED;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #6D28D9; }
+    .note { font-size: 13px; color: #6B7280; text-align: center; line-height: 1.6; }
+    .note a { color: #A78BFA; text-decoration: none; }
+    .note a:hover { color: #7C3AED; }
+    .verify-note {
+      font-size: 13px;
+      color: #9CA3AF;
+      text-align: center;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="https://avivtsadik.github.io/lazy-traveler-legal/">← Privacy Policy</a>
+  </nav>
+
+  <div class="card">
+    <div class="icon">🗑️</div>
+    <h1>Delete Your Account</h1>
+    <p class="subtitle">
+      You can request deletion of your Lazy Traveler account and all associated personal data at any time, free of charge.
+    </p>
+    <p class="updated">Last updated: March 5, 2026</p>
+
+    <div class="scope-note">
+      This includes your account profile, saved landmarks, travel history, and any personal data associated with your account.
+    </div>
+
+    <div class="steps">
+      <h2>How to request deletion</h2>
+      <div class="step">
+        <div class="step-num">1</div>
+        <p>Send an email to <strong>privacy@lazytravel.ai</strong> with the subject line <code>Account Deletion Request</code>.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <p>Include the <strong>email address</strong> associated with your account so we can identify it.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <p>We may ask you to <strong>verify account ownership</strong> to protect your data from unauthorized deletion requests.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <p>We will delete or anonymize your account and all personal data within <strong>30 days</strong>.</p>
+      </div>
+    </div>
+
+    <a
+      class="btn"
+      href="mailto:privacy@lazytravel.ai?subject=Account%20Deletion%20Request&body=Please%20delete%20my%20Lazy%20Traveler%20account.%0A%0AAccount%20email%3A%20"
+    >
+      Request Account Deletion
+    </a>
+
+    <p class="verify-note">We may retain certain data where required by applicable law.</p>
+
+    <p class="note">
+      For more information, read our <a href="https://avivtsadik.github.io/lazy-traveler-legal/">Privacy Policy</a>.
+    </p>
+  </div>
+</body>
+</html>
