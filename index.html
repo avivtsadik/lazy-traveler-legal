@@ -1,485 +1,724 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Lazy Traveler</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
-      background: #111827;
-      color: #F9FAFB;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding: 24px;
-    }
-    nav {
-      width: 100%;
-      max-width: 720px;
-      display: flex;
-      gap: 16px;
-      margin-bottom: 32px;
-      padding-top: 8px;
-    }
-    nav a {
-      color: #A78BFA;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-    }
-    nav a:hover { color: #7C3AED; }
-    .container {
-      max-width: 720px;
-      width: 100%;
-    }
-    .hero {
-      background: #1F2937;
-      border: 1px solid #374151;
-      border-radius: 20px;
-      padding: 40px;
-      margin-bottom: 24px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    }
-    .hero-icon { font-size: 40px; margin-bottom: 16px; }
-    .hero h1 { font-size: 28px; font-weight: 700; color: #F9FAFB; margin-bottom: 8px; }
-    .hero .meta { font-size: 13px; color: #9CA3AF; margin-bottom: 16px; }
-    .hero p { font-size: 15px; color: #D1D5DB; line-height: 1.7; }
-    .section {
-      background: #1F2937;
-      border: 1px solid #374151;
-      border-radius: 16px;
-      padding: 28px 32px;
-      margin-bottom: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    }
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-    .section-num {
-      background: #7C3AED;
-      color: white;
-      border-radius: 8px;
-      width: 28px;
-      height: 28px;
-      font-size: 13px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .section h2 {
-      font-size: 18px;
-      font-weight: 600;
-      color: #F9FAFB;
-    }
-    .section h3 {
-      font-size: 14px;
-      font-weight: 600;
-      color: #A78BFA;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin: 20px 0 10px;
-    }
-    .section h3:first-of-type { margin-top: 8px; }
-    p {
-      font-size: 14px;
-      color: #D1D5DB;
-      line-height: 1.7;
-      margin-bottom: 12px;
-    }
-    p:last-child { margin-bottom: 0; }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    ul li {
-      display: flex;
-      gap: 10px;
-      font-size: 14px;
-      color: #D1D5DB;
-      line-height: 1.6;
-    }
-    ul li::before {
-      content: "•";
-      color: #7C3AED;
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    ol {
-      padding-left: 20px;
-      margin: 0 0 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    ol li {
-      font-size: 14px;
-      color: #D1D5DB;
-      line-height: 1.6;
-      padding-left: 4px;
-    }
-    strong { color: #F9FAFB; font-weight: 600; }
-    .not-collected {
-      background: #111827;
-      border: 1px solid #374151;
-      border-left: 3px solid #EF4444;
-      border-radius: 0 8px 8px 0;
-      padding: 16px 20px;
-      margin: 12px 0;
-    }
-    .not-collected ul { margin: 0; }
-    .highlight-note {
-      background: #1a2535;
-      border-left: 3px solid #7C3AED;
-      border-radius: 0 8px 8px 0;
-      padding: 12px 16px;
-      margin: 12px 0;
-      font-size: 13px;
-      color: #D1D5DB;
-      line-height: 1.6;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 12px 0;
-      font-size: 13px;
-    }
-    th {
-      background: #111827;
-      color: #9CA3AF;
-      text-align: left;
-      padding: 10px 14px;
-      font-weight: 600;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      border-bottom: 1px solid #374151;
-    }
-    td {
-      padding: 10px 14px;
-      color: #D1D5DB;
-      border-bottom: 1px solid #1F2937;
-      vertical-align: top;
-      line-height: 1.5;
-    }
-    tr:last-child td { border-bottom: none; }
-    tr:nth-child(even) td { background: #1a2030; }
-    .contact-box {
-      background: #111827;
-      border: 1px solid #374151;
-      border-radius: 12px;
-      padding: 20px;
-      margin-top: 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .contact-box .label { font-size: 14px; font-weight: 600; color: #F9FAFB; }
-    .contact-box a { color: #A78BFA; text-decoration: none; font-size: 14px; }
-    .contact-box a:hover { color: #7C3AED; }
-    .delete-btn {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 12px 20px;
-      background: #7C3AED;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-size: 14px;
-      font-weight: 600;
-      transition: background 0.2s;
-    }
-    .delete-btn:hover { background: #6D28D9; }
-    footer {
-      max-width: 720px;
-      width: 100%;
-      text-align: center;
-      margin-top: 24px;
-      padding-bottom: 32px;
-      font-size: 13px;
-      color: #6B7280;
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="https://avivtsadik.github.io/lazy-traveler-legal/delete-account">Delete Account</a>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy – Lazy Traveler</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
+          system-ui, sans-serif;
+        background: #111827;
+        color: #f9fafb;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        padding: 24px;
+      }
+      nav {
+        width: 100%;
+        max-width: 720px;
+        display: flex;
+        gap: 16px;
+        margin-bottom: 32px;
+        padding-top: 8px;
+      }
+      nav a {
+        color: #a78bfa;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      nav a:hover {
+        color: #7c3aed;
+      }
+      .container {
+        max-width: 720px;
+        width: 100%;
+      }
+      .hero {
+        background: #1f2937;
+        border: 1px solid #374151;
+        border-radius: 20px;
+        padding: 40px;
+        margin-bottom: 24px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      }
+      .hero-icon {
+        font-size: 40px;
+        margin-bottom: 16px;
+      }
+      .hero h1 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #f9fafb;
+        margin-bottom: 8px;
+      }
+      .hero .meta {
+        font-size: 13px;
+        color: #9ca3af;
+        margin-bottom: 16px;
+      }
+      .hero p {
+        font-size: 15px;
+        color: #d1d5db;
+        line-height: 1.7;
+      }
+      .section {
+        background: #1f2937;
+        border: 1px solid #374151;
+        border-radius: 16px;
+        padding: 28px 32px;
+        margin-bottom: 16px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      }
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+      .section-num {
+        background: #7c3aed;
+        color: white;
+        border-radius: 8px;
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .section h2 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #f9fafb;
+      }
+      .section h3 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #a78bfa;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin: 20px 0 10px;
+      }
+      .section h3:first-of-type {
+        margin-top: 8px;
+      }
+      p {
+        font-size: 14px;
+        color: #d1d5db;
+        line-height: 1.7;
+        margin-bottom: 12px;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      ul li {
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+        color: #d1d5db;
+        line-height: 1.6;
+      }
+      ul li::before {
+        content: "•";
+        color: #7c3aed;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+      ol {
+        padding-left: 20px;
+        margin: 0 0 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      ol li {
+        font-size: 14px;
+        color: #d1d5db;
+        line-height: 1.6;
+        padding-left: 4px;
+      }
+      strong {
+        color: #f9fafb;
+        font-weight: 600;
+      }
+      .not-collected {
+        background: #111827;
+        border: 1px solid #374151;
+        border-left: 3px solid #ef4444;
+        border-radius: 0 8px 8px 0;
+        padding: 16px 20px;
+        margin: 12px 0;
+      }
+      .not-collected ul {
+        margin: 0;
+      }
+      .highlight-note {
+        background: #1a2535;
+        border-left: 3px solid #7c3aed;
+        border-radius: 0 8px 8px 0;
+        padding: 12px 16px;
+        margin: 12px 0;
+        font-size: 13px;
+        color: #d1d5db;
+        line-height: 1.6;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 12px 0;
+        font-size: 13px;
+      }
+      th {
+        background: #111827;
+        color: #9ca3af;
+        text-align: left;
+        padding: 10px 14px;
+        font-weight: 600;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        border-bottom: 1px solid #374151;
+      }
+      td {
+        padding: 10px 14px;
+        color: #d1d5db;
+        border-bottom: 1px solid #1f2937;
+        vertical-align: top;
+        line-height: 1.5;
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+      tr:nth-child(even) td {
+        background: #1a2030;
+      }
+      .contact-box {
+        background: #111827;
+        border: 1px solid #374151;
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .contact-box .label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #f9fafb;
+      }
+      .contact-box a {
+        color: #a78bfa;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .contact-box a:hover {
+        color: #7c3aed;
+      }
+      .delete-btn {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 12px 20px;
+        background: #7c3aed;
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: background 0.2s;
+      }
+      .delete-btn:hover {
+        background: #6d28d9;
+      }
+      footer {
+        max-width: 720px;
+        width: 100%;
+        text-align: center;
+        margin-top: 24px;
+        padding-bottom: 32px;
+        font-size: 13px;
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="https://avivtsadik.github.io/lazy-traveler-legal/delete-account"
+        >Delete Account</a
+      >
+    </nav>
 
-  <div class="container">
-
-    <!-- Hero -->
-    <div class="hero">
-      <div class="hero-icon">🛡️</div>
-      <h1>Privacy Policy</h1>
-      <p class="meta">Effective Date: March 5, 2026 &nbsp;·&nbsp; Last Updated: March 5, 2026</p>
-      <p>
-        Welcome to <strong>Lazy Traveler</strong>, developed and operated by <strong>Lazy Traveler Ltd.</strong>
-        This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information
-        when you use our app and related services. By using the App, you agree to the practices described here.
-        We are committed to protecting your privacy and complying with applicable data protection laws,
-        including the GDPR.
-      </p>
-    </div>
-
-    <!-- 1. Information We Collect -->
-    <div class="section">
-      <div class="section-header">
-        <div class="section-num">1</div>
-        <h2>Information We Collect</h2>
+    <div class="container">
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-icon">🛡️</div>
+        <h1>Privacy Policy</h1>
+        <p class="meta">
+          Effective Date: March 8, 2026 &nbsp;·&nbsp; Last Updated: March 8,
+          2026
+        </p>
+        <p>
+          Welcome to <strong>Lazy Traveler</strong>, developed and operated by
+          <strong>Lazy Traveler Ltd.</strong>
+          This Privacy Policy explains how we collect, use, disclose, and
+          safeguard your personal information when you use our app and related
+          services. By using the App, you agree to the practices described here.
+          We are committed to protecting your privacy and complying with
+          applicable data protection laws, including the GDPR.
+        </p>
       </div>
 
-      <h3>Information You Provide Directly</h3>
-      <ul>
-        <li><strong>Account Information:</strong> When you register or log in via Auth0, we collect your email address and profile information (name, profile picture) provided through your authentication provider.</li>
-        <li><strong>Social Media Content:</strong> When you share a social media post URL or text through the App, we process that content to extract travel landmark information on your behalf.</li>
-      </ul>
+      <!-- 1. Information We Collect -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">1</div>
+          <h2>Information We Collect</h2>
+        </div>
 
-      <h3>Information We Collect Automatically</h3>
-      <ul>
-        <li><strong>Usage Data:</strong> Features used, screens visited, and actions taken.</li>
-        <li><strong>Device Information:</strong> Device type, OS version, and app version for diagnostic purposes.</li>
-        <li><strong>Log Data:</strong> Request timestamps, error logs, and performance metrics recorded by our servers.</li>
-      </ul>
-
-      <h3>Information Derived from Your Content</h3>
-      <ul>
-        <li>We extract <strong>landmark and place names</strong> from your shared content using AI-powered Named Entity Recognition.</li>
-        <li>The URL or text you submit is sent to our AI provider (OpenAI or Anthropic) and may be temporarily retained on our servers for up to <strong>7 days</strong>. Only extracted landmark entities — not the original raw text — are stored beyond that period.</li>
-        <li>We enrich extracted landmarks with publicly available geolocation data from OpenStreetMap and Google Places.</li>
-      </ul>
-      <p>We do <strong>not</strong> store the raw video content of social media posts on our servers.</p>
-
-      <h3>Data We Do NOT Collect</h3>
-      <div class="not-collected">
+        <h3>Information You Provide Directly</h3>
         <ul>
-          <li><strong>Precise or real-time GPS location</strong> — location sensors are never read by the App.</li>
-          <li><strong>Contacts</strong> — we do not access your device contacts.</li>
-          <li><strong>SMS or call logs</strong> — we do not access messages or call history.</li>
-          <li><strong>Camera or microphone</strong> — we do not access these sensors.</li>
-          <li><strong>Financial or payment information</strong> — no in-app purchases or subscriptions exist.</li>
-          <li><strong>Third-party crash analytics</strong> — we do not use Firebase, Sentry, or similar SDKs.</li>
+          <li>
+            <strong>Account Information:</strong> When you register or log in
+            via Auth0, we collect your email address and profile information
+            (name, profile picture) provided through your authentication
+            provider.
+          </li>
+          <li>
+            <strong>Social Media Content:</strong> When you share a social media
+            post URL or text through the App, we process that content to extract
+            travel landmark information on your behalf.
+          </li>
+        </ul>
+
+        <h3>Information We Collect Automatically</h3>
+        <ul>
+          <li>
+            <strong>Usage Data:</strong> Features used, screens visited, and
+            actions taken, tracked via Firebase.
+          </li>
+          <li>
+            <strong>Device Information:</strong> Device type, OS version, and
+            app version for diagnostic purposes.
+          </li>
+          <li>
+            <strong>Log Data:</strong> Request timestamps, error logs, and
+            performance metrics recorded by our servers.
+          </li>
+        </ul>
+
+        <h3>Information Derived from Your Content</h3>
+        <ul>
+          <li>
+            We extract <strong>landmark and place names</strong> from your
+            shared content using AI-powered Named Entity Recognition.
+          </li>
+          <li>
+            The URL or text you submit is sent to our AI provider (OpenAI or
+            Anthropic) and may be temporarily retained on our servers for up to
+            <strong>7 days</strong>. Only extracted landmark entities — not the
+            original raw text — are stored beyond that period.
+          </li>
+          <li>
+            We enrich extracted landmarks with publicly available geolocation
+            data from OpenStreetMap and Google Places.
+          </li>
+          <li>
+            We may fetch and display publicly available images from landmark
+            websites to provide additional visual context.
+          </li>
+        </ul>
+        <p>
+          We do <strong>not</strong> store the raw video content of social media
+          posts on our servers.
+        </p>
+
+        <h3>Data We Do NOT Collect</h3>
+        <div class="not-collected">
+          <ul>
+            <li>
+              <strong>Precise or real-time GPS location storage</strong> — we do
+              not track or store your real-time location on our servers. The App
+              may access location locally with your permission to show your
+              position on the map.
+            </li>
+            <li>
+              <strong>Contacts</strong> — we do not access your device contacts.
+            </li>
+            <li>
+              <strong>SMS or call logs</strong> — we do not access messages or
+              call history.
+            </li>
+            <li>
+              <strong>Camera or microphone</strong> — we do not access these
+              sensors.
+            </li>
+            <li>
+              <strong>Financial or payment information</strong> — no in-app
+              purchases or subscriptions exist.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2. How We Use Your Information -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">2</div>
+          <h2>How We Use Your Information</h2>
+        </div>
+        <ul>
+          <li>
+            <strong>App functionality:</strong> Creating and managing your
+            account, processing shared content, delivering landmark discovery
+            features.
+          </li>
+          <li>
+            <strong>Personalization:</strong> Displaying landmarks relevant to
+            your travel history.
+          </li>
+          <li>
+            <strong>Service improvement:</strong> Analyzing usage patterns to
+            fix bugs and improve performance.
+          </li>
+          <li>
+            <strong>Communications:</strong> Sending service-related
+            notifications and responding to support inquiries.
+          </li>
+          <li>
+            <strong>Security:</strong> Detecting and preventing fraudulent
+            activity and unauthorized access.
+          </li>
+          <li>
+            <strong>Legal compliance:</strong> Meeting applicable legal and
+            regulatory obligations.
+          </li>
+        </ul>
+        <div class="highlight-note">
+          We do <strong>not</strong> use your personal data for advertising and
+          we do <strong>not</strong> sell your data to third parties.
+        </div>
+      </div>
+
+      <!-- 3. Legal Basis (GDPR) -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">3</div>
+          <h2>Legal Basis for Processing (GDPR)</h2>
+        </div>
+        <ul>
+          <li>
+            <strong>Contractual Necessity:</strong> Processing required to
+            provide the services you requested.
+          </li>
+          <li>
+            <strong>Legitimate Interests:</strong> Improving our services,
+            security, and fraud prevention — where not overridden by your
+            rights.
+          </li>
+          <li>
+            <strong>Legal Obligation:</strong> Where required to comply with
+            applicable law.
+          </li>
         </ul>
       </div>
+
+      <!-- 4. How We Share Your Information -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">4</div>
+          <h2>How We Share Your Information</h2>
+        </div>
+        <p>
+          We do not sell, rent, or trade your personal information. We share
+          data only with the following trusted service providers:
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Provider</th>
+              <th>Purpose</th>
+              <th>Data Shared</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Auth0</strong></td>
+              <td>User authentication and identity management</td>
+              <td>Email, profile data</td>
+            </tr>
+            <tr>
+              <td><strong>Firebase (Google)</strong></td>
+              <td>Usage and performance tracking</td>
+              <td>App usage metrics, device model</td>
+            </tr>
+            <tr>
+              <td><strong>OpenAI</strong></td>
+              <td>AI-powered entity extraction from shared content</td>
+              <td>URL or text of shared posts (temporary, up to 7 days)</td>
+            </tr>
+            <tr>
+              <td><strong>OpenStreetMap / Nominatim / Photon</strong></td>
+              <td>Geolocation enrichment of landmarks</td>
+              <td>Place name queries only</td>
+            </tr>
+            <tr>
+              <td><strong>Google Places API</strong></td>
+              <td>Fallback geolocation enrichment</td>
+              <td>Place name queries only</td>
+            </tr>
+            <tr>
+              <td><strong>Cloud Hosting Provider</strong></td>
+              <td>Infrastructure and data storage</td>
+              <td>Encrypted data at rest</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="highlight-note">
+          We do <strong>not</strong> offer in-app purchases or subscriptions and
+          therefore use no payment processors.
+        </div>
+
+        <h3>Legal Requirements</h3>
+        <p>
+          We may disclose your information if required by law or valid legal
+          process (e.g., a court order).
+        </p>
+
+        <h3>Business Transfers</h3>
+        <p>
+          In the event of a merger or acquisition, your data may be transferred.
+          We will notify you before your data becomes subject to a different
+          privacy policy.
+        </p>
+      </div>
+
+      <!-- 5. Data Retention -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">5</div>
+          <h2>Data Retention</h2>
+        </div>
+        <ul>
+          <li>
+            <strong>Account data:</strong> Retained for the lifetime of your
+            account; deleted within 30 days of account deletion.
+          </li>
+          <li>
+            <strong>Share requests:</strong> Automatically expire after 7 days.
+          </li>
+          <li>
+            <strong>Server logs:</strong> Retained for up to 90 days for
+            security and debugging.
+          </li>
+        </ul>
+      </div>
+
+      <!-- 6. Data Security -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">6</div>
+          <h2>Data Security</h2>
+        </div>
+        <ul>
+          <li>
+            <strong>Encryption in transit:</strong> All data is encrypted using
+            TLS.
+          </li>
+          <li>
+            <strong>Encryption at rest:</strong> Personal data in our databases
+            is encrypted at rest.
+          </li>
+          <li>
+            <strong>Access controls:</strong> Access is restricted to authorized
+            personnel on a need-to-know basis.
+          </li>
+          <li>
+            <strong>Authentication:</strong> Accounts secured via Auth0 with
+            OAuth 2.0 support.
+          </li>
+          <li>
+            <strong>Regular reviews:</strong> Periodic security reviews of our
+            infrastructure.
+          </li>
+        </ul>
+        <p>
+          While we take all reasonable precautions, no method of transmission or
+          storage is 100% secure.
+        </p>
+      </div>
+
+      <!-- 7. Your Rights -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">7</div>
+          <h2>Your Rights</h2>
+        </div>
+        <ul>
+          <li>
+            <strong>Right of Access:</strong> Request a copy of the data we hold
+            about you.
+          </li>
+          <li>
+            <strong>Right to Rectification:</strong> Request correction of
+            inaccurate data.
+          </li>
+          <li>
+            <strong>Right to Erasure:</strong> Request deletion of your data
+            ("Right to be Forgotten").
+          </li>
+          <li>
+            <strong>Right to Restrict Processing:</strong> Request limits on how
+            we use your data.
+          </li>
+          <li>
+            <strong>Right to Data Portability:</strong> Receive your data in a
+            machine-readable format.
+          </li>
+          <li>
+            <strong>Right to Object:</strong> Object to processing based on
+            legitimate interests.
+          </li>
+        </ul>
+        <p>
+          To exercise any of these rights, contact us at
+          <strong>privacy@lazytravel.ai</strong>. We will respond within 30
+          days.
+        </p>
+      </div>
+
+      <!-- 8. Account & Data Deletion -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">8</div>
+          <h2>Account &amp; Data Deletion</h2>
+        </div>
+        <p>
+          You can request deletion of your account and all associated personal
+          data by:
+        </p>
+        <ol>
+          <li>
+            <strong>Email:</strong> Send a request to
+            <strong>privacy@lazytravel.ai</strong> with subject "Account
+            Deletion Request".
+          </li>
+          <li>
+            <strong>In-App:</strong> Navigate to
+            <strong>Settings → Account → Delete Account</strong> (if available
+            in your version).
+          </li>
+        </ol>
+        <p>
+          We will delete or anonymize your data within <strong>30 days</strong>,
+          except where retention is required by law.
+        </p>
+        <a
+          class="delete-btn"
+          href="https://avivtsadik.github.io/lazy-traveler-legal/delete-account"
+          >Request Account Deletion →</a
+        >
+      </div>
+
+      <!-- 9. Children's Privacy -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">9</div>
+          <h2>Children's Privacy</h2>
+        </div>
+        <p>
+          The App is not intended for children under 13 (or 16 in the EEA). We
+          do not knowingly collect personal information from children. If you
+          believe a child has provided us with personal data, contact us at
+          <strong>privacy@lazytravel.ai</strong> and we will promptly delete it.
+        </p>
+      </div>
+
+      <!-- 10. Third-Party Links -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">10</div>
+          <h2>Third-Party Links and Services</h2>
+        </div>
+        <p>
+          The App may display information about third-party services (e.g.,
+          landmarks with links to their websites). This Privacy Policy does not
+          apply to those services. We encourage you to review their privacy
+          policies before providing personal information.
+        </p>
+      </div>
+
+      <!-- 11. International Data Transfers -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">11</div>
+          <h2>International Data Transfers</h2>
+        </div>
+        <p>
+          Your personal data may be transferred to and processed in countries
+          outside your country of residence. We implement appropriate safeguards
+          such as Standard Contractual Clauses (SCCs) approved by the European
+          Commission to ensure your data remains protected.
+        </p>
+      </div>
+
+      <!-- 12. Changes -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">12</div>
+          <h2>Changes to This Policy</h2>
+        </div>
+        <p>
+          We may update this Privacy Policy periodically. We will notify you of
+          material changes via an in-app notification on your next login and by
+          updating the "Last Updated" date above. Continued use of the App after
+          changes constitutes acceptance of the updated policy.
+        </p>
+      </div>
+
+      <!-- 13. Contact -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-num">13</div>
+          <h2>Contact Us</h2>
+        </div>
+        <p>
+          For any questions, concerns, or data requests regarding this Privacy
+          Policy, contact us:
+        </p>
+        <div class="contact-box">
+          <span class="label">Lazy Traveler Ltd.</span>
+          <a href="mailto:privacy@lazytravel.ai">privacy@lazytravel.ai</a>
+        </div>
+        <p style="margin-top: 12px">
+          If you are not satisfied with our response, you have the right to
+          lodge a complaint with your local data protection authority.
+        </p>
+      </div>
     </div>
 
-    <!-- 2. How We Use Your Information -->
-    <div class="section">
-      <div class="section-header">
-        <div class="section-num">2</div>
-        <h2>How We Use Your Information</h2>
-      </div>
-      <ul>
-        <li><strong>App functionality:</strong> Creating and managing your account, processing shared content, delivering landmark discovery features.</li>
-        <li><strong>Personalization:</strong> Displaying landmarks relevant to your travel history.</li>
-        <li><strong>Service improvement:</strong> Analyzing server-side usage patterns to fix bugs and improve performance.</li>
-        <li><strong>Communications:</strong> Sending service-related notifications and responding to support inquiries.</li>
-        <li><strong>Security:</strong> Detecting and preventing fraudulent activity and unauthorized access.</li>
-        <li><strong>Legal compliance:</strong> Meeting applicable legal and regulatory obligations.</li>
-      </ul>
-      <div class="highlight-note">
-        We do <strong>not</strong> use your personal data for advertising and we do <strong>not</strong> sell your data to third parties.
-      </div>
-    </div>
-
-    <!-- 3. Legal Basis (GDPR) -->
-    <div class="section">
-      <div class="section-header">
-        <div class="section-num">3</div>
-        <h2>Legal Basis for Processing (GDPR)</h2>
-      </div>
-      <ul>
-        <li><strong>Contractual Necessity:</strong> Processing required to provide the services you requested.</li>
-        <li><strong>Legitimate Interests:</strong> Improving our services, security, and fraud prevention — where not overridden by your rights.</li>
-        <li><strong>Legal Obligation:</strong> Where required to comply with applicable law.</li>
-      </ul>
-    </div>
-
-    <!-- 4. How We Share Your Information -->
-    <div class="section">
-      <div class="section-header">
-        <div class="section-num">4</div>
-        <h2>How We Share Your Information</h2>
-      </div>
-      <p>We do not sell, rent, or trade your personal information. We share data only with the following trusted service providers:</p>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Provider</th>
-            <th>Purpose</th>
-            <th>Data Shared</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Auth0</strong></td>
-            <td>User authentication and identity management</td>
-            <td>Email, profile data</td>
-          </tr>
-          <tr>
-            <td><strong>OpenAI / Anthropic</strong></td>
-            <td>AI-powered entity extraction from shared content</td>
-            <td>URL or text of shared posts (temporary, up to 7 days)</td>
-          </tr>
-          <tr>
-            <td><strong>OpenStreetMap / Nominatim</strong></td>
-            <td>Geolocation enrichment of landmarks</td>
-            <td>Place name queries only</td>
-          </tr>
-          <tr>
-            <td><strong>Google Places API</strong></td>
-            <td>Fallback geolocation enrichment</td>
-            <td>Place name queries only</td>
-          </tr>
-          <tr>
-            <td><strong>Cloud Hosting Provider</strong></td>
-            <td>Infrastructure and data storage</td>
-            <td>Encrypted data at rest</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="highlight-note">
-        We do <strong>not</strong> use Firebase, Google Analytics, Sentry, Mixpanel, or any third-party analytics or crash reporting service. We have no payment processor as we offer no paid features.
-      </div>
-
-      <h3>Legal Requirements</h3>
-      <p>We may disclose your information if required by law or valid legal process (e.g., a court order).</p>
-
-      <h3>Business Transfers</h3>
-      <p>In the event of a merger or acquisition, your data may be transferred. We will notify you before your data becomes subject to a different privacy policy.</p>
-    </div>
-
-    <!-- 5. Data Retention -->
-    <div class="section">
-      <div class="section-header">
-        <div class="section-num">5</div>
-        <h2>Data Retention</h2>
-      </div>
-      <ul>
-        <li><strong>Account data:</strong> Retained for the lifetime of your account; deleted within 30 days of account deletion.</li>
-        <li><strong>Shared URL / text content:</strong> Retained for up to 7 days, then deleted.</li>
-        <li><strong>Share requests:</strong> Automatically expire after 7 days.</li>
-        <li><strong>Landmark data:</strong> Retained as part of your travel history until you delete it or your account.</li>
-        <li><strong>Server logs:</strong> Retained for up to 90 days for security and debugging.</li>
-      </ul>
-    </div>
-
-    <!-- 6. Data Security -->
-    <div class="section">
-      <div class="section-header">
-        <div class="section-num">6</div>
-        <h2>Data Security</h2>
-      </div>
-      <ul>
-        <li><strong>Encryption in transit:</strong> All data is encrypted using TLS.</li>
-        <li><strong>Encryption at rest:</strong> Personal data in our databases is encrypted at rest.</li>
-        <li><strong>Access controls:</strong> Access is restricted to authorized personnel on a need-to-know basis.</li>
-        <li><strong>Authentication:</strong> Accounts secured via Auth0 with OAuth 2.0 support.</li>
-        <li><strong>Regular reviews:</strong> Periodic security reviews of our infrastructure.</li>
-      </ul>
-      <p>While we take all reasonable precautions, no method of transmission or storage is 100% secure.</p>
-    </div>
-
-    <!-- 7. Your Rights -->
-    <div class="section">
-      <div class="section-header">
-        <div class="section-num">7</div>
-        <h2>Your Rights</h2>
-      </div>
-      <ul>
-        <li><strong>Right of Access:</strong> Request a copy of the data we hold about you.</li>
-        <li><strong>Right to Rectification:</strong> Request correction of inaccurate data.</li>
-        <li><strong>Right to Erasure:</strong> Request deletion of your data ("Right to be Forgotten").</li>
-        <li><strong>Right to Restrict Processing:</strong> Request limits on how we use your data.</li>
-        <li><strong>Right to Data Portability:</strong> Receive your data in a machine-readable format.</li>
-        <li><strong>Right to Object:</strong> Object to processing based on legitimate interests.</li>
-      </ul>
-      <p>To exercise any of these rights, contact us at <strong>privacy@lazytravel.ai</strong>. We will respond within 30 days.</p>
-    </div>
-
-    <!-- 8. Account & Data Deletion -->
-    <div class="section">
-      <div class="section-header">
-        <div class="section-num">8</div>
-        <h2>Account &amp; Data Deletion</h2>
-      </div>
-      <p>You can request deletion of your account and all associated personal data by:</p>
-      <ol>
-        <li><strong>Email:</strong> Send a request to <strong>privacy@lazytravel.ai</strong> with subject "Account Deletion Request".</li>
-        <li><strong>In-App:</strong> Navigate to <strong>Settings → Account → Delete Account</strong> (if available in your version).</li>
-      </ol>
-      <p>We will delete or anonymize your data within <strong>30 days</strong>, except where retention is required by law.</p>
-      <a class="delete-btn" href="https://avivtsadik.github.io/lazy-traveler-legal/delete-account">Request Account Deletion →</a>
-    </div>
-
-    <!-- 9. Children's Privacy -->
-    <div class="section">
-      <div class="section-header">
-        <div class="section-num">9</div>
-        <h2>Children's Privacy</h2>
-      </div>
-      <p>The App is not intended for children under 13 (or 16 in the EEA). We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, contact us at <strong>privacy@lazytravel.ai</strong> and we will promptly delete it.</p>
-    </div>
-
-    <!-- 10. Third-Party Links -->
-    <div class="section">
-      <div class="section-header">
-        <div class="section-num">10</div>
-        <h2>Third-Party Links and Services</h2>
-      </div>
-      <p>The App may display information about third-party services (e.g., landmarks with links to their websites). This Privacy Policy does not apply to those services. We encourage you to review their privacy policies before providing personal information.</p>
-    </div>
-
-    <!-- 11. International Data Transfers -->
-    <div class="section">
-      <div class="section-header">
-        <div class="section-num">11</div>
-        <h2>International Data Transfers</h2>
-      </div>
-      <p>Your personal data may be transferred to and processed in countries outside your country of residence. We implement appropriate safeguards such as Standard Contractual Clauses (SCCs) approved by the European Commission to ensure your data remains protected.</p>
-    </div>
-
-    <!-- 12. Changes -->
-    <div class="section">
-      <div class="section-header">
-        <div class="section-num">12</div>
-        <h2>Changes to This Policy</h2>
-      </div>
-      <p>We may update this Privacy Policy periodically. We will notify you of material changes via an in-app notification on your next login and by updating the "Last Updated" date above. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
-    </div>
-
-    <!-- 13. Contact -->
-    <div class="section">
-      <div class="section-header">
-        <div class="section-num">13</div>
-        <h2>Contact Us</h2>
-      </div>
-      <p>For any questions, concerns, or data requests regarding this Privacy Policy, contact us:</p>
-      <div class="contact-box">
-        <span class="label">Lazy Traveler Ltd.</span>
-        <a href="mailto:privacy@lazytravel.ai">privacy@lazytravel.ai</a>
-      </div>
-      <p style="margin-top:12px;">If you are not satisfied with our response, you have the right to lodge a complaint with your local data protection authority.</p>
-    </div>
-
-  </div>
-
-  <footer>
-    This Privacy Policy was last updated on March 5, 2026.
-  </footer>
-</body>
+    <footer>This Privacy Policy was last updated on March 8, 2026.</footer>
+  </body>
 </html>
